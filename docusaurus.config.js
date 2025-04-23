@@ -31,7 +31,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl:
-            'https://github.com/sebastianvillegas25/mi-manual/edit/main/',
+            'https://github.com/sebastianvillegas25/docusaurus/edit/main/',
         },
         blog: {
           showReadingTime: true,
@@ -40,7 +40,7 @@ const config = {
             xslt: true,
           },
           editUrl:
-            'https://github.com/sebastianvillegas25/mi-manual/edit/main/',
+            'https://github.com/sebastianvillegas25/docusaurus/edit/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -71,7 +71,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/sebastianvillegas25/mi-manual',
+            href: 'https://github.com/sebastianvillegas25/docusaurus',
             label: 'GitHub',
             position: 'right',
           },
@@ -115,7 +115,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/sebastianvillegas25/mi-manual',
+                href: 'https://github.com/sebastianvillegas25/docusaurus',
               },
             ],
           },

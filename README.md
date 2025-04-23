@@ -1,41 +1,122 @@
-# Website
+# 📘 Documentación Técnica - Proyecto Docusaurus
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Este proyecto implementa un sitio de documentación usando **Docusaurus** para servir manuales técnicos internos. El sitio ha sido personalizado y desplegado en entorno local y en cPanel bajo un dominio personalizado.
 
-### Installation
+---
 
+## 🔧 1. Instalación Local de Docusaurus
+
+### Requisitos:
+- Node.js (v18.x o superior)
+- npm (v9.x o superior)
+
+### Pasos:
+
+```bash
+npx create-docusaurus@latest mi-docu classic
+cd mi-docu
+npm install
+npm run start
+Accede a: http://localhost:3000
 ```
-$ yarn
+🌐 2. Despliegue en Producción (cPanel)
+Construcción del sitio:
+```bash
+bash
+Copiar
+Editar
+npm run build
+Esto genera una carpeta /build con los archivos estáticos.
 ```
+Subida a cPanel:
+Zipear la carpeta build/ → build.zip
 
-### Local Development
+Subirla al directorio: /public_html/docusaurus/ mediante el Administrador de Archivos
 
+Descomprimirla en ese mismo directorio
+
+Confirmar que el archivo index.html está directamente en public_html/docusaurus
+
+Configuración del baseUrl:
+En docusaurus.config.js, modificar:
+```bash
+js
+Copiar
+Editar
+baseUrl: '/docusaurus/',
+Luego volver a construir:
+
+bash
+Copiar
+Editar
+npm run build
 ```
-$ yarn start
+🌍 3. Dominio Personalizado
+Accediendo al sitio por:
+```bash
+https://tudominio.com/docusaurus
 ```
+📑 4. Contenido del Sitio
+El contenido está organizado en 2 manuales principales.
+```bash
+Archivos:
+docs/inspector.md: Manual del inspector de elementos
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+docs/gestor.md: Guía para implementar un gestor de contraseñas
 
-### Build
-
+Ejemplo de estructura de sidebar.js:
+js
+Copiar
+Editar
+module.exports = {
+  tutorialSidebar: [
+    {
+      type: 'category',
+      label: 'Manuales',
+      items: ['inspector', 'gestor'],
+    },
+  ],
+};
 ```
-$ yarn build
+🎨 5. Personalización de Estilos
+Se modificó el archivo src/css/custom.css para cambiar colores, tipografías y ocultar marcas de Docusaurus.
+
+Ejemplo:
+```bash
+css
+Editar
+.navbar__title,
+.footer__copyright {
+  display: none;
+}
+
+:root {
+  --ifm-color-primary: #00aaff;
+  --ifm-font-family-base: 'Poppins', sans-serif;
+}
+Configuración:
+En docusaurus.config.js:
+
+js
+Copiar
+Editar
+stylesheets: [
+  'src/css/custom.css',
+],
 ```
+🧭 6. Menú Lateral con Íconos
+Se instalaron íconos con react-icons:
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+bash
+```bash
+Editar
+npm install react-icons
+Ejemplo de uso en una página .mdx:
 
-### Deployment
-
-Using SSH:
-
+jsx
+Copiar
+Editar
+import { FaTools } from 'react-icons/fa';
 ```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+# <FaTools /> Manual del Inspector de Elementos
+Para mostrar íconos en el menú lateral de forma avanzada.
