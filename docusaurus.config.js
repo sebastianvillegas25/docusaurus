@@ -9,11 +9,11 @@ const config = {
 
   // Producción: GitHub Pages
   url: 'https://sebastianvillegas25.github.io',
-  baseUrl: '/mi-manual/',
+  baseUrl: '/docusaurus/',
 
   // Configuración de GitHub Pages
   organizationName: 'sebastianvillegas25',
-  projectName: 'mi-manual',
+  projectName: 'docusaurus',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
