@@ -60,7 +60,7 @@ const config = {
         title: 'Mi Manual',
         logo: {
           alt: 'Logo de Mi Manual',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
