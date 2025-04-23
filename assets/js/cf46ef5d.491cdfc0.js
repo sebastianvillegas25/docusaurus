@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmi_manual=self.webpackChunkmi_manual||[]).push([[536],{8075:a=>{a.exports=JSON.parse('{"metadata":{"permalink":"/mi-manual/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

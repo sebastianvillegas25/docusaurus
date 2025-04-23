@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmi_manual=self.webpackChunkmi_manual||[]).push([[1903],{1912:a=>{a.exports=JSON.parse('{"blogBasePath":"/mi-manual/blog","blogTitle":"Blog","authorsListPath":"/mi-manual/blog/authors"}')}}]);
