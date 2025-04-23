@@ -1,30 +1,187 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Personalización completa del tema
  */
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+ :root {
+  /* Color principal y sus variantes */
+  --ifm-color-primary: #1e88e5;
+  --ifm-color-primary-dark: #1976d2;
+  --ifm-color-primary-darker: #1565c0;
+  --ifm-color-primary-darkest: #0d47a1;
+  --ifm-color-primary-light: #42a5f5;
+  --ifm-color-primary-lighter: #64b5f6;
+  --ifm-color-primary-lightest: #90caf9;
+  
+  /* Otros colores y variables */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --ifm-navbar-height: 70px;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #f5f7f9;
+  --ifm-menu-color-active: var(--ifm-color-primary);
+  --ifm-menu-color-background-active: rgba(30, 136, 229, 0.1);
+  
+  /* Variables personalizadas */
+  --custom-sidebar-width: 300px;
+  --custom-border-radius: 8px;
+  --custom-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Tema oscuro */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #42a5f5;
+  --ifm-color-primary-dark: #2196f3;
+  --ifm-color-primary-darker: #1e88e5;
+  --ifm-color-primary-darkest: #1565c0;
+  --ifm-color-primary-light: #64b5f6;
+  --ifm-color-primary-lighter: #90caf9;
+  --ifm-color-primary-lightest: #bbdefb;
+  
+  --ifm-navbar-background-color: #121212;
+  --ifm-background-color: #1e1e1e;
+  --ifm-footer-background-color: #121212;
+  --ifm-menu-color-background-active: rgba(66, 165, 245, 0.1);
+}
+
+/* Personalización de la barra de navegación */
+.navbar {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  height: var(--ifm-navbar-height);
+}
+
+.navbar__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar__logo {
+  height: 40px;
+  margin-right: 12px;
+}
+
+/* Personalización de la barra lateral */
+.menu {
+  padding: 1.5rem 0.8rem !important;
+  font-weight: 500;
+  width: var(--custom-sidebar-width);
+}
+
+.menu__list {
+  margin-left: 0.5rem !important;
+}
+
+.menu__list-item {
+  margin: 0.3rem 0;
+}
+
+.menu__link {
+  border-radius: var(--custom-border-radius);
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.menu__link:hover {
+  background-color: var(--ifm-menu-color-background-active);
+}
+
+.sidebar-item-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.sidebar-item-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.menu__list-item-collapsible:hover {
+  background-color: transparent;
+}
+
+/* Personalización del contenido principal */
+.container {
+  max-width: 1140px;
+  padding: 2rem 1rem;
+}
+
+.main-wrapper {
+  display: flex;
+}
+
+article {
+  margin-bottom: 3rem;
+}
+
+/* Personalización de títulos */
+.markdown h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.markdown h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ifm-hr-background-color);
+}
+
+.markdown h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Personalización de código */
+.prism-code {
+  border-radius: var(--custom-border-radius);
+  margin-bottom: 1.5rem;
+}
+
+.code-block-error-line {
+  background-color: #ff000020;
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+  border-left: 3px solid #ff000080;
+}
+
+/* Quitar menciones a Docusaurus */
+.footer__link-item[href^="https://docusaurus.io"] {
+  display: none;
+}
+
+.footer__copyright {
+  font-size: 0.9rem;
+  color: var(--ifm-color-gray-600);
+}
+
+/* Estilo para las tarjetas */
+.card {
+  border-radius: var(--custom-border-radius);
+  box-shadow: var(--custom-box-shadow);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 996px) {
+  :root {
+    --ifm-navbar-height: 60px;
+  }
+  
+  .navbar__title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Animaciones para suavizar transiciones */
+.navbar, .menu__link, .card {
+  transition: all 0.2s ease-in-out;
 }

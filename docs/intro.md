@@ -2,46 +2,31 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introducción al Manual de Desarrollo Web
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Bienvenido a nuestra documentación completa sobre herramientas de desarrollo web. Este manual está diseñado para ayudarte a dominar las herramientas de desarrollo integradas en los navegadores modernos, con especial énfasis en el **Inspector de Elementos**.
 
-## Getting Started
+## ¿Qué encontrarás en este manual?
 
-Get started by **creating a new site**.
+Este manual cubre desde los conceptos básicos hasta técnicas avanzadas para:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+- Inspeccionar y modificar HTML y CSS en tiempo real
+- Depurar JavaScript de manera efectiva
+- Analizar el rendimiento de tu sitio web
+- Optimizar la experiencia en dispositivos móviles
+- Resolver problemas comunes de diseño y funcionalidad
 
-### What you'll need
+## ¿A quién está dirigido?
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+Este manual es útil para:
 
-## Generate a new site
+- **Desarrolladores principiantes** que desean familiarizarse con las herramientas de desarrollo
+- **Diseñadores web** que necesitan ajustar estilos con precisión
+- **Desarrolladores experimentados** que buscan mejorar su flujo de trabajo
+- **Profesionales QA** que necesitan identificar y reportar problemas
 
-Generate a new Docusaurus site using the **classic template**.
+## Cómo usar este manual
 
-The classic template will automatically be added to your project after you run the command:
+Recomendamos seguir el manual en orden, pero puedes saltar directamente a las secciones que te interesen usando la barra lateral de navegación.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+¡Empecemos a explorar el poder del Inspector de Elementos!
