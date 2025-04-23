@@ -1,6 +1,7 @@
 # 📘 Documentación Técnica - Proyecto Docusaurus
 
 Este proyecto implementa un sitio de documentación usando **Docusaurus** para servir manuales técnicos internos. El sitio ha sido personalizado y desplegado en entorno local y en cPanel bajo un dominio personalizado.
+link: https://sebastianvillegas25.github.io/docusaurus/
 
 ---
 
